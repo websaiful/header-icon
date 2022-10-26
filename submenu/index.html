@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive submenu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8f037f1f1d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/8f037f1f1d.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h3>websaiful</h3>
+        </div>
+      <input type="checkbox" id="check">
+      <label for="check" id="bars">
+        <i class="fas fa-bars"></i>
+      </label>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li id="click"><a href="#">service<i class="fas fa-caret-down"></i></a>
+                 <ul class="submenu">
+                    <li><a href="#">web design</a></li>
+                    <li><a href="#">graphic design</a></li>
+                    <li><a href="#">wordpress</a></li>
+                 </ul>
+            </li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">feedback</a></li>
+        </ul>
+    </nav>
+    <script src="custom.js"></script>
+</body>
+</html>

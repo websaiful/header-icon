@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sub menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+            color: #fff;
+            /* list-style-type: none; */
+        }
+        nav{
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul{
+            display: flex;
+            margin-right: 50px;
+        }
+        nav ul li{
+            list-style-type: none;
+            margin: 0px 10px;
+            padding: 10px 10px;
+            transition: .5s;
+            position: relative;
+            
+        }
+        nav ul li:hover{
+            background-color: crimson;
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .submenu{
+            position: absolute;
+            width: 150px;
+            background-color: black;
+            text-align: center;
+            margin-top: 10px;
+            transform: scaleY(0);
+            transform-origin: top;
+            text-align: center;
+            visibility: visible;
+            display: list-item;
+            transition: .5s;
+            margin-right:15px ;
+            left: 0;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 10px black;
+            
+            
+        }
+        .submenu li{
+            list-style-type: none;
+            padding: 5px 0px;
+            border-bottom: 1px solid #fff;
+            margin: 0;
+            cursor: pointer;
+            
+        }
+        .submenu li:first-child {
+            border-top: 1px solid #fff;
+        }
+        .submenu li:last-child{
+            /* border: none; */
+        } 
+        .submenu li a{
+            text-decoration: none;
+        }
+        nav ul li:hover .submenu{
+            visibility: visible;
+    transform: scaleY(1);
+    
+        }
+        
+        @media only screen and (max-width:992px){
+            nav ul{
+                position: fixed;
+                background-color: blueviolet;
+                top: 30px;
+                left: 0;
+                width: 250px;
+                flex-direction: column;
+                text-align: center;
+
+            }
+        }
+
+
+      
+
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <h2>web saiful</h2>
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">service</a>
+            <ul class="submenu">
+                <li><a href="#">web design</a></li>
+                <li><a href="#">wordpress</a></li>
+                <li><a href="#">graphic design</a></li>
+                <li><a href="#">ms office</a></li>
+            </ul>
+            </li>
+            <li><a href="">contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

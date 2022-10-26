@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-transform: capitalize;
+            box-sizing: border-box;
+        }
+        
+       
+        @media(min-width:768px){
+            nav{
+            background: brown;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+            nav ul{
+           display: flex;
+        }
+        nav ul li{
+            list-style-type: none;
+            margin: 10px 20px;
+        }
+        nav ul li a{
+            text-decoration: none;
+          transition: .5s;
+          font-size: 20px;
+            padding: 10px 15px;
+        }
+        nav ul li a:hover{
+            background: cadetblue;
+        }
+        nav h2{
+            margin-left: 20px;
+        }
+        }
+        @media (max-width:768px){
+            nav{
+              
+                background-color: brown;
+                height: 40px;
+
+            }
+            nav ul{
+              position: absolute;
+              top: 40px;
+              left: 0px;
+              width: 240px;
+              height: 100%;
+              background-color: blueviolet;
+              text-align: center;
+            }
+            nav ul li{
+                list-style-type: none;
+                margin-top: 50px;
+            }
+            nav ul li a{
+                text-decoration: none;
+                background-color: gray;
+                padding: 10px 90px;
+                border-radius: 20px;
+            }
+            nav h2{
+                display: none;
+            }
+            
+           nav  #toggle{
+                height: 22px;
+                width: 22px;
+                position: fixed;
+                top: 12px;
+                left: 20px;
+                /* background-color: #fff; */
+            }
+            nav #toggle .spinner{
+                height: 3px;
+                background-color: #fff;
+                transition: 0.5s;
+            }
+            nav #toggle .spinner.middle{
+                margin: 4px 0px;
+            }
+            nav #checkbox:checked ~ #toggle .spinner.middle{
+                opacity: 0;
+            } 
+            nav #checkbox:checked ~ #toggle .spinner.top{
+                transform: rotate(135deg);
+                margin-top: 10px;
+                transition: 0.5s;
+            }
+            nav #checkbox:checked ~ #toggle .spinner.bottom{
+                transform: rotate(-135deg);
+                margin-top: -13px;
+                transition: 0.5s;
+            }
+            nav #checkbox:checked ~  nav ul{
+                transform: translateX(0px);
+            }
+            nav #checkbox:checked ~  nav ul{
+                transform: translateX(-250);
+            }
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>web saiful</h2>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">feedback</a></li>
+            <li><a href="#">ask me</a></li>
+        </ul>
+        <input style="display:none ;" type="checkbox" id="checkbox">
+    <label for="checkbox" id="toggle">
+<div class="spinner top"></div>
+<div class="spinner middle"></div>
+<div class="spinner bottom"></div>
+    </label>
+    </nav>
+    
+</body>
+</html>

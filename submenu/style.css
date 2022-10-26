@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+nav{
+    background-color: #6c5ce7;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    margin-right: 30px;
+}
+nav ul li{
+    list-style-type: none;
+    /* margin: 0 10px; */
+    /* padding: 15px 10px; */
+    transition: .5s;
+    position: relative;
+    
+    
+}
+nav ul li:hover .submenu{
+    transform: scaleY(1);
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+ transition: .5s;
+    padding: 15px 20px;
+    display: block;
+    /* border-radius: 5px; */
+}
+nav ul li a:hover{
+    background-color: #5947df;
+}
+.logo{
+    padding-left: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+.fa-caret-down{
+    margin-left: 15px;
+}
+/* submenu desdign */
+.submenu{
+    position: absolute;
+    top: 57px;
+    left: 0;
+    background-color: #6c5ce7;
+    flex-direction: column;
+    width: 250px;
+    text-align: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 1s;
+    /* display: none; */
+}
+.submenu li{
+  border-bottom: 1px solid #fff;
+ 
+}
+.submenu li:first-child{
+    border-top: 1px solid #fff;
+}
+.submenu li a{
+    display: block;
+}
+#bars{
+    color: #fff;
+    font-size: 35px;
+    display: none;
+    cursor: pointer;
+    
+}
+#check{
+    display: none;
+
+}
+#check:checked ~ #bars i::before{
+    content: '\f00d';
+}
+
+@media only screen and (max-width:992px){
+    #bars{
+        display: block;
+        margin-right: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    
+    nav ul{
+        position: fixed;
+        top: 60px;
+        background-color: #6c5ce7;
+        flex-direction: column;
+        width: 250px;
+        text-align: center;
+        left: -250px;
+        transition: .5s ease;
+        /* z-index: 100; */
+    }
+    nav ul li{
+        border-bottom: 1px solid #fff;
+    }
+    nav ul li:hover .submenu{
+        display: block;
+    }
+    nav ul li:first-child{
+        border-top: 1px solid #fff;
+    }
+    nav ul li a{
+        /* display: block; */
+    }
+    nav ul li a:hover{
+        background-color: #5146a5;
+    }
+    nav ul li .submenu{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        transition: .5s ;
+        z-index: 100;
+      display: none;
+    
+      transition: .5s;
+    }
+     
+}
