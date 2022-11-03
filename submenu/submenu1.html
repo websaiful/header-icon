@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submenu</title>
+    <script src="https://kit.fontawesome.com/8f037f1f1d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="submenu1.css">
+</head>
+<body>
+    <input type="checkbox" id="click">
+    <label for="click" class="bars">
+        <i class="fas fa-bars"></i>
+    </label>
+    <div class="side-bar">
+        <div class="menu-bar">
+            <div class="item"><a href="#"><i class="fas fa-home"></i>Home</a></div>
+            <div class="item"><a class="sub-menu"><i class="fas fa-address-card"></i>about<i class="fas fa-caret-down dropdwon"></i></a>
+                 <div class="sub-item">
+                    <div class="item"><a href="#"> <span></span> sub menu 01</a></div>
+                    <div class="item"><a href="#">sub menu 01</a></div>
+                    <div class="item"><a href="#">sub menu 01</a></div>
+                 </div>     
+            </div>
+            <div class="item"><a href="#"><i class="fas fa-address-book"></i>contact</a></div>
+            <div class="item"><a class="sub-menu"><i class="fas fa-comment-alt"></i>feedback<i class="fas fa-caret-down dropdwon"></i></a>
+                <div class="sub-item">
+                    <div class="item"><a href="#">sub menu 01</a></div>
+                    <div class="item"><a href="#">sub menu 01</a></div>
+                    <div class="item"><a href="#">sub menu 01</a></div>
+                 </div>
+            </div>
+            <div class="item"><a href="#"><i class="fas fa-share-alt"></i>social</a></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="submenu1.js"></script>
+</body>
+</html>
